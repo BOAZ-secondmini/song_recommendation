@@ -13,7 +13,7 @@ def page_crawl(key, url):
            "artist" : [],
            "lyric" : [] }
     
-    for i in range(1, 3):
+    for i in range(1, 51):
         
         # 장르
         music["genre"].append(key)
@@ -28,6 +28,7 @@ def page_crawl(key, url):
         
         # 노래제목
         song_name = driver.find_element(By.CSS_SELECTOR, "#downloadfrm > div > div > div.entry > div.info > div.song_name").text
+        print(song_name)
         music["song_name"].append(song_name)
         
         # 가수
@@ -35,22 +36,30 @@ def page_crawl(key, url):
         music["artist"].append(artist)
         
         # 펼치기 클릭
-        driver.find_element(By.CSS_SELECTOR, "#lyricArea > button").click()
-        time.sleep(3)
-        
-        # 가사
-        lyric = driver.find_element(By.CSS_SELECTOR, "#d_video_summary").text
-        music["lyric"].append(lyric)
-        time.sleep(1)
+        try:
+            driver.find_element(By.CSS_SELECTOR, "#lyricArea > button").click()
+            time.sleep(3)
+            # 가사          
+            lyric = driver.find_element(By.CSS_SELECTOR, "#d_video_summary").text
+            music["lyric"].append(lyric)
+            time.sleep(1)
+        except:
+            music["lyric"].append("가사없음")
+            time.sleep(1)
         
     return music
         
 
 # 크롬드라이버 실행
-driver = webdriver.Chrome('./chromedriver') 
+driver = webdriver.Chrome('chromedriver') 
 
 melon_url = 'https://www.melon.com/genre/song_list.htm?gnrCode=GN0'
-genre = {"록/메탈": "600", "포크/블루스": "800"}
+genre = {"발라드": "100",
+        "랩/힙합": "300", 
+        "R&B/Soul": "400", 
+        "인디음악": "500",
+        "록/메탈": "600", 
+        "포크/블루스": "800"}
 steady = "&steadyYn=Y"
 
 
@@ -77,4 +86,4 @@ for key, value in genre.items():
 print(df)
 
 # csv파일로 내보내기
-df.to_csv('music.csv', index=False)
+df.to_csv('data/music.csv', index=False)
