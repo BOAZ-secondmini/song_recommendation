@@ -12,9 +12,9 @@
 ### LSTM(Long Short Term Memory)
 RNN의 Vanishing Gradient 문제랑 long-term dependency 문제를 해결하기 위해 등장한 모델입니다. LSTM에서는 RNN과 달리 forget gate, input gate, output gate, cell state 등 여러 gate를 두어서 RNN의 문제를 해결했지만 여전히 long-term dependency 문제와 gate가 많다는 단점이 존재합니다.
 
-### 모델 구조
+### 모델 구조 ([모델](https://drive.google.com/file/d/1WxcuBBWYcmcEysxJvTrZ34F9flS2OFYB/view?usp=share_link))
 ![image](https://github.com/BOAZ-secondmini/song_recommendation/assets/84063359/946db17c-175d-46e6-b3c7-3b0e7ca45247)
-(https://drive.google.com/file/d/1WxcuBBWYcmcEysxJvTrZ34F9flS2OFYB/view?usp=share_link)
+
 ## 성능 결과
 |Used Data|Model Name|Accuracy|
 |---|---|---|
