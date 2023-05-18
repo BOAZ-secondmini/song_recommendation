@@ -16,11 +16,12 @@ RNN의 Vanishing Gradient 문제랑 long-term dependency 문제를 해결하기 
 ![image](https://github.com/BOAZ-secondmini/song_recommendation/assets/84063359/946db17c-175d-46e6-b3c7-3b0e7ca45247)
 
 ## 성능 결과
-|Used Data|Model Name|Accuracy|
-|---|---|---|
-|Naver Movie|LSTM(10 epochs, earlystopping)|84.09%|
-|Naver Movie + shopping + steam + AI Hub|LSTM(30 epochs, earlystopping)|86.43%|
-|Naver Movie + shopping|LSTM(30 epochs, earlystopping)|88.48%|
+|Used Data|Model Name|setup|Accuracy|
+|---|---|---|---|
+|Naver Movie|LSTM|10 epochs|84.09%|
+|Naver Movie + shopping + steam + AI Hub|LSTM|30 epochs, Adam optimizer|86.43%|
+|Naver Movie + shopping + steam|LSTM|30 epochs, Adam optimizer|87.04%|
+|Naver Movie + shopping|LSTM|30 epochs, Adam optimizer|88.48%|
 
 
 
