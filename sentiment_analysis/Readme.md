@@ -14,7 +14,7 @@ RNN의 Vanishing Gradient 문제랑 long-term dependency 문제를 해결하기 
 
 ### 모델 구조
 ![image](https://github.com/BOAZ-secondmini/song_recommendation/assets/84063359/946db17c-175d-46e6-b3c7-3b0e7ca45247)
-
+(https://drive.google.com/file/d/1WxcuBBWYcmcEysxJvTrZ34F9flS2OFYB/view?usp=share_link)
 ## 성능 결과
 |Used Data|Model Name|Accuracy|
 |---|---|---|
