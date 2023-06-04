@@ -16,7 +16,7 @@
 ├── end-to-end
 |   ├── data
 |   |   ├── After_sentiment_0604 for lyric summary.csv
-|   ├── end-to-end.py
+├── ├── end-to-end.py
 |   ├── sentiment_model2.h5
 |   ├── tokenizer2.pickle
 ``` 
