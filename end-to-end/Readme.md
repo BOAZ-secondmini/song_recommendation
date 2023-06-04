@@ -6,7 +6,6 @@
 2. 해당 링크를 참고하여 [Mecab 다운로드](https://velog.io/@wkfwktka/%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90-Mecab-%EC%84%A4%EC%B9%98Python)을 진행해 주세요.
 3. 터미널에 접속하여 아래와 같은 과정을 거치세요. 
  ```
- >>> cd boaz_second_project
  >>> pip install -r requirements.txt
  >>> python end-to-end.py
  ```
