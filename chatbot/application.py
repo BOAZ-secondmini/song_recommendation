@@ -1,4 +1,8 @@
-import test
+# import test
+import sys
+sys.path.append(file_path)
+
+from end-to-end import end-to-end.py
 from flask import Flask, request, jsonify
 
 
@@ -6,7 +10,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "Hello goorm!"
+    return "Hello BOAZ!"
 
 @application.route("/music",methods=['POST'])
 def music():
