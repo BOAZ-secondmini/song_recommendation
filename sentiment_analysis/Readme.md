@@ -24,7 +24,7 @@ RNN의 Vanishing Gradient 문제랑 long-term dependency 문제를 해결하기 
 |Naver Movie|tensorflow Tokenizer|LSTM|82.55%|
 |Naver Movie + shopping + steam + AI Hub|tensorflow Tokenizer|LSTM|86.43%|
 |Naver Movie + shopping + steam|tensorflow Tokenizer|LSTM|87.04%|
-|**Naver Movie + shopping**|**tensorflow Tokenizer**|**LSTM**|**88.48%**|
+|**Naver Movie + shopping**|**tensorflow Tokenizer**|**LSTM**|**88.71%**|
 
 
 
