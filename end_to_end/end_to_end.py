@@ -60,7 +60,8 @@ def mecab_preprocessing(input_sentence):
     tags = ['JK', 'JKS', 'JKC', 'JKG', 'JKO', 'JKB', 'JKV', 'JKQ', 'JX', 'JC', 'EP', 'EF', 'EC', 'ETN', 'ETM']
 
 
-    mecab = Mecab(dicpath="C://mecab/mecab-ko-dic")
+    mecab = Mecab(dicpath="/usr/local/lib/mecab/dic/mecab-ko-dic")
+
     josa_removed = [x[0] for x in mecab.pos(hangul_sentence) if x[1] not in tags]
     preprocessed_sentence = ' '.join(josa_removed)
     
@@ -101,26 +102,32 @@ def final_recommendation(candidate_song) -> list:
     return candidate_song.iloc[recommend_index][['song_name', 'artist']]
 
 def final_print_recommendation(recommend_data):
-     for i in range(len(recommend_data)):
+    
+    answer = ""
+    for i in range(len(recommend_data)):
         if i == 10:
             break
+        answer += '{}번째 추천 곡은 {}의 {}입니다.\n'.format(i+1, recommend_data.iloc[i, 1], recommend_data.iloc[i, 0])
         print('{}번째 추천 곡은 {}의 {}입니다.'.format(i+1, recommend_data.iloc[i, 1], recommend_data.iloc[i, 0],))
+        
+    return answer
 
 
 
 # 요즘 시험기간이라 조금 힘든데 공부할 것은 많고 팀플도 너무 많고 어떻게 해야 할 지 모르겠어. 아 빨리 종강 왔으면 좋겠는데 종강 2주나 남아서 언제까지 기다리냐 너무너무너무 힘들다. 노래 추천해봐
 # 보아즈에는 정말 좋은 사람이 많아. 뭐 우리 미니 플젝 팀원은 물론이지. 벌써 6개월이 지났다는 것이 믿기지가 않는데 남은 기간동안 화이팅하자 ㅎㅎ 
 
-def main():
+def main(input_sentence):
     # loading => 토크나이저 모델 불러오기
     with open('tokenizer2.pickle', 'rb') as handle:
         tokenizer = pickle.load(handle)
 
     trial = 0
     while trial < 1:
-        input_sentence = input('요즘 어때요?\n')
+        # input_sentence = input('요즘 어때요?\n')
         if len(input_sentence) <= 30:
-            print('100자 이상 입력해 주세요\n')
+            return '30자 이상 입력해 주세요'
+            # print('100자 이상 입력해 주세요\n')
             continue
         pad_sequences = sentence_to_vector(tokenizer, input_sentence)
         prediction_score = prediction(sentiment_model, pad_sequences)
@@ -141,5 +148,6 @@ def main():
             print()
         trial += 1
 
-if __name__ == "__main__":
-    main()
+# 강제실행 멈춤
+# if __name__ == "__main__":
+#     main()
