@@ -1,8 +1,9 @@
 # import test
 import sys
-sys.path.append(file_path)
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
-from end-to-end import end-to-end.py
+
+from end-to-end import end-to-end
 from flask import Flask, request, jsonify
 
 
