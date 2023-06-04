@@ -1,6 +1,25 @@
 # BOAZ Analysis Second Mini Project
 **사용자의 SNS를 통해 감성분석 후 알맞는 노래 추천하기\
 팀원 : [김기수](https://github.com/Kisooofficial), [김민혜](https://github.com/minelolo), [정원준](https://github.com/garden-jun), [최은선](https://github.com/thisissilverline)**
+
+## Getting Started(End-to-End)
+1. 감성분석 모델을 [감성분석 모델](https://drive.google.com/file/d/1-2xjvBezQ8gJRI5Y--43l8iJVFRQ3Zva/view?usp=sharing)에서 다운로드 받고, end-to-end.py와 같은 경로에 위치시켜 주세요.
+2. 해당 링크를 참고하여 [Mecab 다운로드](https://velog.io/@wkfwktka/%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90-Mecab-%EC%84%A4%EC%B9%98Python)을 진행해 주세요.
+3. 터미널에 접속하여 아래와 같은 과정을 거치세요. 
+ ```
+ >>> cd end-to-end
+ >>> pip install -r requirements.txt
+ >>> python end-to-end.py
+ ```
+4. 파일의 경로 및 위치는 아래와 같습니다.
+```bash
+├── data
+│   ├── After_sentiment_0604 for lyric summary.csv
+├── end-to-end.py
+└── sentiment_model2.h5
+└── tokenizer2.pickle
+``` 
+
 ## Data Collection
 * 감정 분석을 적용할 데이터를 얻기 위해, 멜론에서 700개의 가사를 수집하였습니다.
   * 수집 기준 : 2023년 5월 둘째주 기준으로 실시간 TOP 100 + 장르별(댄스와 트로트 제외) 100개씩 수집
