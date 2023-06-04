@@ -13,11 +13,12 @@
  ```
 4. 파일의 경로 및 위치는 아래와 같습니다.
 ```bash
-├── data
-│   ├── After_sentiment_0604 for lyric summary.csv
-├── end-to-end.py
-└── sentiment_model2.h5
-└── tokenizer2.pickle
+├── end-to-end
+|   ├── data
+|   |   ├── After_sentiment_0604 for lyric summary.csv
+|   ├── end-to-end.py
+|   ├── sentiment_model2.h5
+|   ├── tokenizer2.pickle
 ``` 
 
 ## Data Collection
