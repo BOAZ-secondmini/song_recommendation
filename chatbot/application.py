@@ -3,7 +3,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 
-from end-to-end import end-to-end
+import end_to_end
 from flask import Flask, request, jsonify
 
 
@@ -21,9 +21,9 @@ def music():
     content = req['userRequest']['utterance']
     print(content)
 
-    music = test.test(content)
+    music = end_to_end.main(content)
     
-    print(music)
+    print("호출 성공")
     
     # 답변 텍스트 설정
     res = {
