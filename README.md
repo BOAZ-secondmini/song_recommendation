@@ -50,3 +50,8 @@
 |Naver Movie + shopping + steam + AI Hub|tensorflow Tokenizer|LSTM|86.43%|
 |Naver Movie + shopping + steam|tensorflow Tokenizer|LSTM|87.04%|
 |**Naver Movie + shopping**|**tensorflow Tokenizer**|**LSTM**|**88.48%**|
+
+## Recommendation System
+* 구축한 감정 분석 모델의 한계점
+  * 감정 분석의 정확도가 100%가 아니며, 오로지 긍정과 부정이라는 두 가지 감정만으로 구분하고 있음.
+  * 현재 구축한 감정 분석 모델의 단점으로는 부정/긍정 어휘가 쓰이지 않고 맥락을 파악하는 문제에서 제대로 파악하지 못함.
