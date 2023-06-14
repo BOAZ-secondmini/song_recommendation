@@ -2,7 +2,7 @@
 **사용자의 SNS를 통해 감성분석 후 알맞는 노래 추천하기\
 팀원 : [김기수](https://github.com/Kisooofficial), [김민혜](https://github.com/minelolo), [정원준](https://github.com/garden-jun), [최은선](https://github.com/thisissilverline)**
 
-2023-06-08 Update
+2023-06-14 Update
 ## Getting Started(End-to-End)
 1. 감성분석 모델을 [감성분석 모델](https://drive.google.com/file/d/1-2xjvBezQ8gJRI5Y--43l8iJVFRQ3Zva/view?usp=sharing)에서 다운로드 받고, end-to-end.py와 같은 경로에 위치시켜 주세요.
 2. 해당 링크를 참고하여 [Mecab 다운로드](https://velog.io/@wkfwktka/%EC%9C%88%EB%8F%84%EC%9A%B0%EC%97%90-Mecab-%EC%84%A4%EC%B9%98Python)을 진행해 주세요.
