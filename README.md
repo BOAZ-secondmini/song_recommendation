@@ -50,7 +50,7 @@
 |Naver Movie|tensorflow Tokenizer|LSTM|82.55%|
 |Naver Movie + shopping + steam + AI Hub|tensorflow Tokenizer|LSTM|86.43%|
 |Naver Movie + shopping + steam|tensorflow Tokenizer|LSTM|87.04%|
-|**Naver Movie + shopping**|**tensorflow Tokenizer**|**LSTM**|**88.48%**|
+|**Naver Movie + shopping**|**tensorflow Tokenizer**|**LSTM**|**88.71%**|
 
 ## Recommendation System
 * 구축한 감정 분석 모델의 한계점
